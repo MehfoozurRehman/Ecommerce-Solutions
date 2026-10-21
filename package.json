@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"cd admin && npm run dev && cd ..\" \"cd api && npm run dev && cd ..\" \"cd store && npm run dev && cd ..\"",
-    "build": "concurrently \"cd admin && npm run build && cd ..\" \"cd api && npm run build && cd ..\" \"cd store && npm run build && cd ..\""
+    "dev": "node api.js && concurrently \"cd admin && npm run dev && cd ..\" \"cd api && npm run dev && cd ..\" \"cd store && npm run dev && cd ..\"",
+    "build": "node api.js && concurrently \"cd admin && npm run build && cd ..\" \"cd api && npm run build && cd ..\" \"cd store && npm run build && cd ..\""
   },
   "keywords": [],
   "author": "",
